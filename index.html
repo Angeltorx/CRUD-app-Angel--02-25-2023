@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header>
-        <img src="" alt="">
-        <h2 class="mt-7 text-center">Contruyendo un nuevo Futuro</h2>
+    <header class="header">
+        <img class="logo1" src="/assets/image/colombia-logo1.png" alt="LogoColombia">
+        <h2>Contruyendo un nuevo Futuro</h2>
     </header>
     <Section id="container1">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="mt-7 text-center">Censo 2023</h1>
-                    <p class="mt-7 text-center">Por favor llenar todos los requisitos para un registro completo</p>
+            <div class="col, col-md-12">
+                <div class="col-md-6">
+                    <h1 class="text-center">Pre-Censo 2023</h1>
+                    <p class="text-center">Por favor llenar todos los requisitos para un pre-registro completo</p>
                     <form>
                         <div class="form-group">
                             <label for="inputIdentification">Tipo de Indetificacion</label>
@@ -34,18 +34,19 @@
                         </div>
                         <div class="row">
                             <div class="col text-end">
-                                <button type="button" class="btn btn-dark mt-3" id="saveBtn">Guardar</button>
+                                <button type="button" class="btn btn-primary mt-3" id="saveBtn">Guardar</button>
+                                <button type="button" class="btn btn-danger mt-3" id="deleteBtn">Borrar</button>
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="col-md-12 mt-4">
+                <div class="col-md-12 md-6">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Nombre Y Apellido</th>
-                                <th>Direccion</th>
-                                <th>Estrato</th>
+                                <th class="text-center">Identificacion</th>
+                                <th class="text-center">Nombre Y Apellido</th>
+                                <th class="text-center">Direccion</th>
+                                <th class="text-center">Estrato</th>
                                 <th class="text-center">Acciones</th>
                             </tr>
                         </thead>
