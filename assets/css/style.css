@@ -1,26 +1,19 @@
 * {
     font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.header{
+header {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.logo1{
-    display: flex;
+    justify-content:center;
+    min-height: 30px;
+    padding: 20px;
     align-items: center;
 }
 
-.logo1 img {
-    height: 60px;
-    margin: right;
-}
