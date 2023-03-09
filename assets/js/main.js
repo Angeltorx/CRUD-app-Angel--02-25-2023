@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const saveBtn = document.getElementById("saveBtn");
+    const saveBtn = document.g7etElementById("saveBtn");
     const changeThemeBtn = document.getElementById("changeThemeBtn");
     const inputIdentification = document.getElementById("inputIdentification");
     const inputName = document.getElementById("inputName");
@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputEmail = document.getElementById("inputEmail");
     let tableBody = document.getElementById("tableBody")
 
-
+    function loadData(){
+        tableBody.innerHTML =`
+        <tr id="noData">
+            <td> No existen registros<td>
+        </tr>
+        `;
+    }
 
 
 });
