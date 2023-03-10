@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const saveBtn = document.g7etElementById("saveBtn");
+    const saveBtn = document.getElementById("saveBtn");
     const changeThemeBtn = document.getElementById("changeThemeBtn");
     const inputIdentification = document.getElementById("inputIdentification");
     const inputName = document.getElementById("inputName");
@@ -16,14 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         console.log("Entro a load data.");
+
         const data=JSON.parse(localStorage.getItem("data")) || [];
-        if(data.length){Document.getItemById("noData").remove()};
+
+        if(data.length){
+            document.getElementById("noData").remove()
+        };
 
         data.forEach((poblacion, index)=> {
             let tr =document.createElement("tr");
             tr.innerHTML=`
             <td>${index+1}</td>
-            <td>${poblacion.identification}</td>
+            <td>${poblacion.identificacion}</td>
             <td>${poblacion.name}</td>
             <td>${poblacion.direccion}</td>
             <td>${poblacion.estrato}</td>
@@ -48,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     saveBtn.addEventListener("click", () =>{
         const identificacion=inputIdentification.value;
         const name=inputName.value;
-        const direccion=inputDireccion;
-        const estrato=inputEstrato;
-        const email=inputEmail;
+        const direccion=inputDireccion.value;
+        const estrato=inputEstrato.value;
+        const email=inputEmail.value;
         if(!name){
             return;
         }
@@ -59,18 +63,38 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(direccion);
         console.log(estrato);
         console.log(email);
-        let data =JSON.parse(localStorage.getItem ("data")) ||[];
+        let data = JSON.parse(localStorage.getItem ("data")) ||[];
         const index=saveBtn.getAttribute("data-index")
         console.log(index)
         if(index){
-            data[index]={identification,name, direccion, estrato, email}
+            data[index]={identificacion,name, direccion, estrato, email}
             saveBtn.removeAttribute("data-index")
         } else {
-            data.push({identification,name, direccion, estrato, email});
+            data.push({identificacion,name, direccion, estrato, email});
         }
         localStorage.setItem("data", JSON.stringify(data));
         cleanForm();
         loadData();
     });
 
+    tableBody.addEventListener("click",(e) => {
+        console.log(e.target.classList);
+        if(e.target.classList.contains('btn-edit')){
+            const index = e.target.dataset.index;
+            const data = JSON.parse(localStorage.getItem("data"))
+            const item = data[index];
+            inputIdentification.value = item.identificacion
+            inputName.value = item.name
+            inputDireccion.value = item.direccion
+            inputEstrato.value = item.estrato// aqui esta el error
+            inputEmail.value = item.email
+            saveBtn.setAttribute("data-index", index)
+            data.splice(index, 1, {...item})
+        } else if (e.target.classList.contains('btn-delete')){
+            const index=JSON.parse(localStorage.getItem("data"))
+            loadData()
+        }
+    })
+    loadData()
 });
+

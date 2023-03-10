@@ -28,14 +28,14 @@
                         <h1 class="text-center">Pre-Censo 2023</h1>
                         <p class="text-center">Por favor llenar todos los campos para un pre-registro completo</p>
                         <div class="form-group">
-                            <label for="inputIdentification">Tipo de Indetificacion</label>
+                            <label for="inputIdentification">Tipo de Identificacion</label>
                             <input type="text" class="form-control" id="inputIdentification" placeholder="CC-10940235326" maxlength="10" required>
                             <label for="inputName">Nombre y Apellido</label>
                             <input type="text" class="form-control" id="inputName" placeholder="Nombre completo" maxlength="30" required>
-                            <label for="inputdireccion">Direccion</label>
-                            <input type="text" class="form-control" id="inputdireccion" placeholder="Calle, # casa" maxlength="70" required>
+                            <label for="inputDireccion">Direccion</label>
+                            <input type="text" class="form-control" id="inputDireccion" placeholder="Calle, # casa" maxlength="70" required>
                             <label for="inputEstrato">Estrato</label>
-                            <input type="number" class="form-control" id="inputEstrato" placeholder="1,2,3,4, etc" maxlength="1" required>
+                            <input type="text" class="form-control" id="inputEstrato" placeholder="1,2,3,4, etc" maxlength="1" required>
                             <label for="inputEmail">Email</label>
                             <input type="text" class="form-control" id="inputEmail" placeholder="Email@email.com" maxlength="20" required>
                         </div>
@@ -49,11 +49,12 @@
                     <table class="table table-bordered, col-md-12">
                         <thead>
                             <tr>
+                                <th class="text-center">ID</th>
                                 <th class="text-center">Identificacion</th>
                                 <th class="text-center">Nombre completo</th>
-                                <th class="text-center">Correo Electronico</th>
                                 <th class="text-center">Direccion</th>
                                 <th class="text-center">Estrato</th>
+                                <th class="text-center">Correo Electronico</th>
                                 <th class="text-center">Acciones</th>
                             </tr>
                         </thead>
@@ -71,3 +72,4 @@
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
+
