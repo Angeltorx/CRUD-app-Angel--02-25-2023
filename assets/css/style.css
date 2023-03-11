@@ -25,3 +25,24 @@ header {
     margin-top: 30px;
     padding-bottom: 25px;
 }
+
+footer {
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+.logo1 {
+    width: 30px;
+}
+
+.table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    text-align: center;
+}
