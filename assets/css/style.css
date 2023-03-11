@@ -1,6 +1,6 @@
 * {
     font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color:#fffefe ;
 }
 
 .container {
@@ -17,6 +17,11 @@ header {
     align-items: center;
 }
 
-/*form ::placeholder {
-    color:rgba(0, 0, 0,0.1)
+.logo-size{
+    height: 100%;
+    width: 60%;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+    padding-bottom: 25px;
 }
