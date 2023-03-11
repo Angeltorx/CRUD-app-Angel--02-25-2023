@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${poblacion.email}</td>
             <td class="text center">
                 <button type="button" class="btn btn-warning btn-edit" data-index="${index}">Actualizar</button>
-                <button type="button" class="btn btn-danger btn-edit" data-index="${index}">Eliminar</button>
+                <button type="button" class="btn btn-danger btn-delete" data-index="${index}">Eliminar</button>
             </td>
             `;
             tableBody.appendChild(tr);
@@ -91,7 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
             saveBtn.setAttribute("data-index", index)
             data.splice(index, 1, {...item})
         } else if (e.target.classList.contains('btn-delete')){
-            const index=JSON.parse(localStorage.getItem("data"))
+            const index = e.target.dataset.index;
+            const data = JSON.parse(localStorage.getItem("data"))
+            data.splice(index, 1)
+            localStorage.setItem("data", JSON.stringify(data))
             loadData()
         }
     })

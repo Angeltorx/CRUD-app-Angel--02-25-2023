@@ -11,22 +11,62 @@
 </head>
 <body>
     <header>
-        <div class="row">
-            <div class="col text-center">
-                <button type="button" class="btn btn-dark" id="changeThemeBtn">Spanish</button>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Inicio de Sesion</a></li>
+                      <li><a class="dropdown-item" href="#">Registro de Usuario</a></li>
+                      <li><a class="dropdown-item" href="#">Soporte Tecnico</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pre-Censo 2023</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">PC-Nuevo Registro</a></li>
+                      <li><a class="dropdown-item" href="#">Constancia de Inscripcion</a></li>
+                      <li><a class="dropdown-item" href="#">Reportar Incidencia</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Seccion legal</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Constitucion Colombiana</a></li>
+                      <li><a class="dropdown-item" href="#">Ley de Censos 2023</a></li>
+                      <li><a class="dropdown-item" href="#">Ley de proteccion de Datos</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+        <div class="container">
+            <div class="row ">
+                <div class="pl-5 col-md-6 col-sm-12">
+                    <img src="/assets/image/colombia-logo1.png" alt="LogoColombia">
+                </div>
+                <div class="col-md-6 col-sm-12 pt-5"><h1 class="text-left">Pre-Censo 2023</h1>
+                </div>
             </div>
         </div>
-    </header>
-    <div id="header1" class="col, col-md-9">
-        <img class="align-content-center" src="/assets/image/colombia-logo1.png" alt="LogoColombia">
-    </div>
-    <Section id="container1, d-flex justify-content-center">
+        <Section>
         <div class="container">
-            <div class="col, col-md-12">
-                <div class="col-md-8" >
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
                     <form>
-                        <h1 class="text-center">Pre-Censo 2023</h1>
-                        <p class="text-center">Por favor llenar todos los campos para un pre-registro completo</p>
+                        <p class="text-center">Por favor llenar todos los campos para un Pre-Registro Exitoso</p>
                         <div class="form-group">
                             <label for="inputIdentification">Tipo de Identificacion</label>
                             <input type="text" class="form-control" id="inputIdentification" placeholder="CC-10940235326" maxlength="10" required>
@@ -45,6 +85,7 @@
                             </div>
                         </div>
                     </form>
+                </div>
                 <div class="col-md-12">
                     <table class="table table-bordered, col-md-12">
                         <thead>
@@ -61,7 +102,6 @@
                         <tbody id="tableBody">
                         </tbody>
                     </table>
-                </div>
                 </div>
             </div>
         </div>
